@@ -19,12 +19,7 @@ namespace DataAccessLayer.Repositories
             context = new Context();
             DbSetCurrentEntity = context.Set<T>();
         }
-        public void Add(T t)
-        {
-            context.Add(t);
-            context.SaveChanges();
-
-        }
+     
         public void Delete(T t)
         {
            context.Remove(t);
