@@ -8,7 +8,6 @@ namespace PresentationLayer.Controllers
 {
     public class CategoryController : Controller
     {
-        Context context = new();
         CategoryManager manager = new CategoryManager(new EfCategoryRepository());
         public IActionResult Index()
         {
