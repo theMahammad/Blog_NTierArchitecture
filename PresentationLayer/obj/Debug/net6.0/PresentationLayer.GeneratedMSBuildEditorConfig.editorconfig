@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\hssjx\source\repos\LearningMVC\PresentationLayer
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Blog/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Article/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Category/Index.cshtml]

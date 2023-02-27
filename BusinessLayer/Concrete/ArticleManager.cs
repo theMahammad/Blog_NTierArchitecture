@@ -18,27 +18,27 @@ namespace BusinessLayer.Concrete
 		}
 		public void Add(Article t)
 		{
-			throw new NotImplementedException();
+			articleDal.Insert(t);
 		}
 
 		public void Delete(Article t)
 		{
-			throw new NotImplementedException();
+			articleDal.Delete(t); 
 		}
 
-		public List<Article> GetAll(Article t)
+		public List<Article> GetAll()
 		{
-			throw new NotImplementedException();
+			return articleDal.GetAll();
 		}
 
 		public Article GetById(int id)
 		{
-			throw new NotImplementedException();
+			return articleDal.GetById(id);
 		}
 
 		public void Update(Article t)
 		{
-			throw new NotImplementedException();
+			articleDal.Update(t);
 		}
 	}
 }

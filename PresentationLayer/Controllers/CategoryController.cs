@@ -12,7 +12,7 @@ namespace PresentationLayer.Controllers
         public IActionResult Index()
         {
 
-            var categories = manager.GetAllCategories();
+            var categories = manager.GetAll();
             return View(categories);
         }
     }

@@ -33,7 +33,7 @@ namespace BusinessLayer.Concrete
 			categoryDal.Update(t);
 		}
 
-		public List<Category> GetAll(Category t)
+		public List<Category> GetAll()
 		{
 			return categoryDal.GetAll();
 		}

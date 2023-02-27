@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         public string Content { get; set; }
         public string ThumbNailImage { get; set; }
         public string Image { get; set; }
-        public string CreateDate { get; set; }
+        public DateTime CreateDate { get; set; }
         public bool IsDeleted { get; set; }
         [ForeignKey("Category")]
         public int CategoryID { get; set; }
