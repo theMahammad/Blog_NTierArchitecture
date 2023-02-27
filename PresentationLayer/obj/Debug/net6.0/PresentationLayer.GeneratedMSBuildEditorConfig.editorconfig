@@ -36,12 +36,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial/UserLayout_Footer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcVXNlckxheW91dF9Gb290ZXIuY3NodG1s
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0Zvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial/UserLayout_Header.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxcVXNlckxheW91dF9IZWFkZXIuY3NodG1s
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Footer_AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0Zvb3Rlcl9BYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Footer_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0Zvb3Rlcl9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Footer_LatestPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0Zvb3Rlcl9MYXRlc3RQb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Footer_Subscribe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0Zvb3Rlcl9TdWJzY3JpYmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Header_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0hlYWRlcl9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Partial_UserLayout/UserLayout_Header_Top.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxfVXNlckxheW91dFxVc2VyTGF5b3V0X0hlYWRlcl9Ub3AuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/UserLayout.cshtml]
