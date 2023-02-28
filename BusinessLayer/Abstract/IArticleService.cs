@@ -9,6 +9,6 @@ namespace BusinessLayer.Abstract
 {
 	public interface IArticleService:IGenericService<Article>
 	{
-
+		Article ShowSelectedArticle(int id);
 	}
 }

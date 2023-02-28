@@ -37,6 +37,11 @@ namespace BusinessLayer.Concrete
 			return articleDal.GetById(id);
 		}
 
+		public Article ShowSelectedArticle(int id)
+		{
+			return articleDal.ShowSelectedArticle(id);
+		}
+
 		public void Update(Article t)
 		{
 			articleDal.Update(t);

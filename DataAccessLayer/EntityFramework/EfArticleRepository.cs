@@ -10,16 +10,14 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-	public class EfArticleRepository:GenericRepository<Article>,IArticleDal
+	public class EfArticleRepository : GenericRepository<Article>, IArticleDal
 	{
-	
-		public override Article GetById(int id)
+		public Article ShowSelectedArticle(int id)
 		{
-			var selectedArticle = context.Articles.Find(id);
-			selectedArticle.ClickAmount++;
+			var article = GetById(id);
+			article.ClickAmount++;
 			context.SaveChanges();
-			return selectedArticle;
-			
+			return article;
 		}
 	}
 }

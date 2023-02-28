@@ -31,7 +31,7 @@ namespace DataAccessLayer.Repositories
             return DbSetCurrentEntity.ToList();
         }
 
-        public virtual T GetById(int id)
+        public  T GetById(int id)
         {
             return DbSetCurrentEntity.Find(id);
         }

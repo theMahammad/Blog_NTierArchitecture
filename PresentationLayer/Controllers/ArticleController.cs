@@ -69,7 +69,7 @@ namespace PresentationLayer.Controllers
         }
         public IActionResult GetArticle(int id){
 
-            var selectedArticle = manager.GetById(id);
+            var selectedArticle = manager.ShowSelectedArticle(id);
             selectedArticle.ClickAmount++;
 
             return RedirectToAction("Index");
