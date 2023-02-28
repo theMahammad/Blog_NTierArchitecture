@@ -18,6 +18,7 @@ namespace BusinessLayer.Concrete
 		}
 		public void Add(Article t)
 		{
+			t.Content = t.Content.Trim();
 			articleDal.Insert(t);
 		}
 

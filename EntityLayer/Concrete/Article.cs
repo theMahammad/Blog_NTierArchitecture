@@ -18,6 +18,7 @@ namespace EntityLayer.Concrete
         public string Image { get; set; }
         public DateTime CreateDate { get; set; }
         public bool IsDeleted { get; set; }
+        public long ClickAmount { get; set; }
         [ForeignKey("Category")]
         public int CategoryID { get; set; }
         public Category Category { get; set; }

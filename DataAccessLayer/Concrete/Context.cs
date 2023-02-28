@@ -24,6 +24,7 @@ namespace DataAccessLayer.Concrete
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
             modelBuilder.Entity<Article>().Property(x => x.CreateDate).HasColumnType("datetime");
+            modelBuilder.Entity<Article>().Property(x => x.ClickAmount).HasDefaultValue(0);
 		}
 		public DbSet<About> Abouts { get; set; }
         public DbSet<Category> Categories{ get; set; }

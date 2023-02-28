@@ -12,7 +12,7 @@ namespace DataAccessLayer.Repositories
 {
     public class GenericRepository<T> : IGenericDal<T> where T:class
     {
-        Context context;
+        protected Context context;
         DbSet<T> DbSetCurrentEntity;
         public GenericRepository()
         {
@@ -31,7 +31,7 @@ namespace DataAccessLayer.Repositories
             return DbSetCurrentEntity.ToList();
         }
 
-        public T GetById(int id)
+        public virtual T GetById(int id)
         {
             return DbSetCurrentEntity.Find(id);
         }
