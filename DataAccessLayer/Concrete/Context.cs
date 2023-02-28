@@ -1,10 +1,12 @@
 ﻿using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace DataAccessLayer.Concrete
 {
@@ -25,6 +27,7 @@ namespace DataAccessLayer.Concrete
 		{
             modelBuilder.Entity<Article>().Property(x => x.CreateDate).HasColumnType("datetime");
             modelBuilder.Entity<Article>().Property(x => x.ClickAmount).HasDefaultValue(0);
+            
 		}
 		public DbSet<About> Abouts { get; set; }
         public DbSet<Category> Categories{ get; set; }

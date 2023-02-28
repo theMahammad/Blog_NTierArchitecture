@@ -16,6 +16,8 @@ namespace DataAccessLayer.Migrations
                 type: "bigint",
                 nullable: false,
                 defaultValue: 0L);
+            migrationBuilder.Sql(@"create trigger CreateSlug 
+                                 on ");
         }
 
         /// <inheritdoc />

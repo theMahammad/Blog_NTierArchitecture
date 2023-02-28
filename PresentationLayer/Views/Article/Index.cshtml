@@ -43,8 +43,18 @@
 									<a href="single.html">@item.Title</a>
 								</h5>
 								
-								<p class="card-text mb-3">@(item.Content)... </p>
-								<a href="Article/GetArticle/@item.ID" class="btn btn-primary read-m">Read More</a>
+								<p class="card-text mb-3">
+									@if (item.Content.Length > 50)
+									{
+										@((item.Content.Substring(0, item.Content.Substring(0, 50).LastIndexOf(" "))))
+
+
+									}else{
+										@item.Content
+									}
+									...
+								</p>
+								<a href="Article/BlogDetails/@item.ID" class="btn btn-primary read-m">Read More</a>
 							</div>
 						</div>
 
