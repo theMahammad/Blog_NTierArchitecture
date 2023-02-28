@@ -45,7 +45,7 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Index()
         {
-            var articles = manager.GetAll();
+            var articles = manager.GetAllArticlesWithCategoryAndWriter();
             //For displaying only three word
             articles.ForEach(x => x.Content = GetFirstXWord(x.Content, 3));
             return View(articles);
@@ -69,7 +69,7 @@ namespace PresentationLayer.Controllers
         }
         public IActionResult GetArticle(int id){
 
-            var selectedArticle = manager.ShowSelectedArticle(id);
+            var selectedArticle = manager.GetArticleByIncreasingClickAmount(id);
             selectedArticle.ClickAmount++;
 
             return RedirectToAction("Index");

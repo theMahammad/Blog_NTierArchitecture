@@ -10,6 +10,7 @@ namespace DataAccessLayer.Abstract
 {
 	public interface IArticleDal:IGenericDal<Article>
 	{
-		public Article ShowSelectedArticle(int id);
+		public Article GetArticleByIncreasingClickAmount(int id);
+		public List<Article> GetAllArticlesWithCategoryAndWriter();
 	}
 }

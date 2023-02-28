@@ -37,14 +37,19 @@ namespace BusinessLayer.Concrete
 			return articleDal.GetById(id);
 		}
 
-		public Article ShowSelectedArticle(int id)
+		public Article GetArticleByIncreasingClickAmount(int id)
 		{
-			return articleDal.ShowSelectedArticle(id);
+			return articleDal.GetArticleByIncreasingClickAmount(id);
 		}
 
 		public void Update(Article t)
 		{
 			articleDal.Update(t);
+		}
+
+		public List<Article> GetAllArticlesWithCategoryAndWriter()
+		{
+			return articleDal.GetAllArticlesWithCategoryAndWriter();
 		}
 	}
 }
