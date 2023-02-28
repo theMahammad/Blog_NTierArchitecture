@@ -45,7 +45,7 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Index()
         {
-            var articles = manager.GetAllArticlesWithCategoryAndWriter();
+            var articles = manager.GetAllArticlesWithAllRelatedElements();
             //For displaying only three word
             articles.ForEach(x => x.Content = GetFirstXWord(x.Content, 3));
             return View(articles);

@@ -11,6 +11,7 @@ namespace DataAccessLayer.Abstract
 	public interface IArticleDal:IGenericDal<Article>
 	{
 		public Article GetArticleByIncreasingClickAmount(int id);
-		public List<Article> GetAllArticlesWithCategoryAndWriter();
+		public List<Article> GetAllArticlesWithCategory();
+		public List<Article> GetAllArticlesWithAllRelatedElements();
 	}
 }

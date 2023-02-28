@@ -10,7 +10,8 @@ namespace BusinessLayer.Abstract
 {
 	public interface IArticleService:IGenericService<Article>
 	{
-		public List<Article> GetAllArticlesWithCategoryAndWriter();
+		public List<Article> GetAllArticlesWithCategory();
 		Article GetArticleByIncreasingClickAmount(int id);
+		public List<Article> GetAllArticlesWithAllRelatedElements();
 	}
 }

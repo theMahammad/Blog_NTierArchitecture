@@ -47,9 +47,14 @@ namespace BusinessLayer.Concrete
 			articleDal.Update(t);
 		}
 
-		public List<Article> GetAllArticlesWithCategoryAndWriter()
+		public List<Article> GetAllArticlesWithCategory()
 		{
-			return articleDal.GetAllArticlesWithCategoryAndWriter();
+			return articleDal.GetAllArticlesWithCategory();
+		}
+
+		public List<Article> GetAllArticlesWithAllRelatedElements()
+		{
+			return articleDal.GetAllArticlesWithAllRelatedElements();
 		}
 	}
 }

@@ -14,13 +14,24 @@ namespace DataAccessLayer.EntityFramework
 {
 	public class EfArticleRepository : GenericRepository<Article>, IArticleDal
 	{
-		public List<Article> GetAllArticlesWithCategoryAndWriter()
+		public List<Article> GetAllArticlesWithAllRelatedElements()
 		{
-			using(var context = new Context())
+			using (var context = new Context())
 			{
 				return context.Articles
 					.Include(x => x.Category)
-					.Include(x => x.Writer).ToList();
+					.Include(x=> x.Writer)
+					.Include(x=> x.Comments)
+					.ToList();
+
+			}
+		}
+
+		public List<Article> GetAllArticlesWithCategory()
+		{
+			using(var context = new Context())
+			{
+				return context.Articles.Include(x => x.Category).ToList();
 
 			}
 		}
