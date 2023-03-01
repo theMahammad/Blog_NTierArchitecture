@@ -6,12 +6,14 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
+
 	public class EfArticleRepository : GenericRepository<Article>, IArticleDal
 	{
 		public List<Article> GetAllArticlesWithAllRelatedElements()
@@ -36,12 +38,24 @@ namespace DataAccessLayer.EntityFramework
 			}
 		}
 
-		public Article GetArticleByIncreasingClickAmount(int id)
+		public Article GetByIdIncreasingClickAmount(int id)
 		{
 			var article = GetById(id);
-			article.ClickAmount++;
-			context.SaveChanges();
-			return article;
+			IncreaseClickAmount(article);
+            return article;
 		}
-	}
+
+        public Article GetByIdWithAllRelatedElements(int id)
+        {	
+			var selectedArticle = GetAllArticlesWithAllRelatedElements().Find(x=>x.ID == id);
+			IncreaseClickAmount(selectedArticle);
+            return selectedArticle;
+        }
+
+        public void IncreaseClickAmount(Article article)
+        {
+            article.ClickAmount++;
+            Update(article);
+        }
+    }
 }

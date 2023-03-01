@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2Hpt1r/rAOO8giezVOMoWnF14Q474z1jn7U6XF1p3hKNtFRFTCSVZEHvBeuIM/AuDpQXsc4gAeW83DDPbKr3Ew==",
+  "dgSpecHash": "YVCHvWmTxsGDgWW4J8JJPXg49rsqMJsECkaqw9Mn3oWfUmOA8Mm55T8vgdW6MfyNBTxwNOSMPLOxLF+++pKcXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\PresentationLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hssjx\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\hssjx\\.nuget\\packages\\laraue.efcoretriggers.common\\7.0.6\\laraue.efcoretriggers.common.7.0.6.nupkg.sha512",
+    "C:\\Users\\hssjx\\.nuget\\packages\\laraue.efcoretriggers.sqlserver\\7.0.6\\laraue.efcoretriggers.sqlserver.7.0.6.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",

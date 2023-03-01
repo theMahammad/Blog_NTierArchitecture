@@ -2,6 +2,7 @@
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using PresentationLayer.Models;
 
 namespace PresentationLayer.Controllers
 {
@@ -32,13 +33,21 @@ namespace PresentationLayer.Controllers
             manager.Add(article);            
             return RedirectToAction("Index");
         }
-       
+              
+        
         public IActionResult ArticleDetails(int id){
 
-            var selectedArticle = manager.GetArticleByIncreasingClickAmount(id);
+            var selectedArticle = manager.GetByIdWithAllRelatedElements(id);
             
-
-            return View(selectedArticle);
+            if(selectedArticle != null)
+            {
+                return View(selectedArticle);
+            }
+            else
+            {
+                return View("Error",new ErrorViewModel() { RequestId="404"});
+            }
+           
         }
     }
 }

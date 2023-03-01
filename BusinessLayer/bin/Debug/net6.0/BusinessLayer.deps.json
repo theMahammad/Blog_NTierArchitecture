@@ -49,6 +49,29 @@
           }
         }
       },
+      "Laraue.EfCoreTriggers.Common/7.0.6": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.2",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.2"
+        },
+        "runtime": {
+          "lib/net6.0/Laraue.EfCoreTriggers.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Laraue.EfCoreTriggers.SqlServer/7.0.6": {
+        "dependencies": {
+          "Laraue.EfCoreTriggers.Common": "7.0.6"
+        },
+        "runtime": {
+          "lib/net6.0/Laraue.EfCoreTriggers.SqlServer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -614,6 +637,7 @@
       "DataAccessLayer/1.0.0": {
         "dependencies": {
           "EntityLayer": "1.0.0",
+          "Laraue.EfCoreTriggers.SqlServer": "7.0.6",
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
         },
@@ -647,6 +671,20 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "Laraue.EfCoreTriggers.Common/7.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sMYEWU7be6P8Hg1Ovxj+BgvkFuIW1ZoCWj6S6Iu5UnZ8AdBDA0Hzo7OifWZFjcXleyOqjAPTKy0Im5xfBn2cyg==",
+      "path": "laraue.efcoretriggers.common/7.0.6",
+      "hashPath": "laraue.efcoretriggers.common.7.0.6.nupkg.sha512"
+    },
+    "Laraue.EfCoreTriggers.SqlServer/7.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0wSsC+BfPLWw4/469kVfHQ2lPpz8PTsvzIbVtHDesLIYOWmpJNPrzmV20fUGeI0TgVeFwnT20FkUxzziwfLjbg==",
+      "path": "laraue.efcoretriggers.sqlserver/7.0.6",
+      "hashPath": "laraue.efcoretriggers.sqlserver.7.0.6.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

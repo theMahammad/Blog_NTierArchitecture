@@ -59,6 +59,39 @@
           }
         }
       },
+      "Laraue.EfCoreTriggers.Common/7.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Laraue.EfCoreTriggers.Common.dll": {
+            "related": ".xml;.runtimeconfig.json"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Laraue.EfCoreTriggers.Common.dll": {
+            "related": ".xml;.runtimeconfig.json"
+          }
+        }
+      },
+      "Laraue.EfCoreTriggers.SqlServer/7.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Laraue.EfCoreTriggers.Common": "7.0.6"
+        },
+        "compile": {
+          "lib/net6.0/Laraue.EfCoreTriggers.SqlServer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Laraue.EfCoreTriggers.SqlServer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -3702,6 +3735,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "EntityLayer": "1.0.0",
+          "Laraue.EfCoreTriggers.SqlServer": "7.0.6",
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
         },
@@ -3779,6 +3813,33 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Laraue.EfCoreTriggers.Common/7.0.6": {
+      "sha512": "sMYEWU7be6P8Hg1Ovxj+BgvkFuIW1ZoCWj6S6Iu5UnZ8AdBDA0Hzo7OifWZFjcXleyOqjAPTKy0Im5xfBn2cyg==",
+      "type": "package",
+      "path": "laraue.efcoretriggers.common/7.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "laraue.efcoretriggers.common.7.0.6.nupkg.sha512",
+        "laraue.efcoretriggers.common.nuspec",
+        "lib/net6.0/Laraue.EfCoreTriggers.Common.dll",
+        "lib/net6.0/Laraue.EfCoreTriggers.Common.runtimeconfig.json",
+        "lib/net6.0/Laraue.EfCoreTriggers.Common.xml"
+      ]
+    },
+    "Laraue.EfCoreTriggers.SqlServer/7.0.6": {
+      "sha512": "0wSsC+BfPLWw4/469kVfHQ2lPpz8PTsvzIbVtHDesLIYOWmpJNPrzmV20fUGeI0TgVeFwnT20FkUxzziwfLjbg==",
+      "type": "package",
+      "path": "laraue.efcoretriggers.sqlserver/7.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "laraue.efcoretriggers.sqlserver.7.0.6.nupkg.sha512",
+        "laraue.efcoretriggers.sqlserver.nuspec",
+        "lib/net6.0/Laraue.EfCoreTriggers.SqlServer.dll",
+        "lib/net6.0/Laraue.EfCoreTriggers.SqlServer.xml"
       ]
     },
     "MessagePack/2.1.152": {

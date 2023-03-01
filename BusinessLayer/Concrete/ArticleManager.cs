@@ -37,9 +37,9 @@ namespace BusinessLayer.Concrete
 			return articleDal.GetById(id);
 		}
 
-		public Article GetArticleByIncreasingClickAmount(int id)
+		public Article GetByIdIncreasingClickAmount(int id)
 		{
-			return articleDal.GetArticleByIncreasingClickAmount(id);
+			return articleDal.GetByIdIncreasingClickAmount(id);
 		}
 
 		public void Update(Article t)
@@ -56,5 +56,18 @@ namespace BusinessLayer.Concrete
 		{
 			return articleDal.GetAllArticlesWithAllRelatedElements();
 		}
-	}
+
+        public Article GetByIdWithAllRelatedElements(int id)
+        {
+			if(id!=0)
+			{
+                return articleDal.GetByIdWithAllRelatedElements(id);
+			}
+			else
+			{
+				return null;
+			}
+			
+        }
+    }
 }

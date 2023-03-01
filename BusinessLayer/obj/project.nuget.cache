@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GAsax81+9kVlaEAyv1WeMtNcdseBK7X41hL6As71Ix7w9eEeHFn4eSyn4Ag+2LHlF7Liya0qi1OIyE9T8u+pvQ==",
+  "dgSpecHash": "C7FilYQ9McxNWTzBr42msTtpU26y0WtHK15VuU8LTAWtTtp4iOn7yLD5pyoZ473hZUs6kSRRAd/icIeGwqB7bw==",
   "success": true,
   "projectFilePath": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hssjx\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\hssjx\\.nuget\\packages\\laraue.efcoretriggers.common\\7.0.6\\laraue.efcoretriggers.common.7.0.6.nupkg.sha512",
+    "C:\\Users\\hssjx\\.nuget\\packages\\laraue.efcoretriggers.sqlserver\\7.0.6\\laraue.efcoretriggers.sqlserver.7.0.6.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
