@@ -27,6 +27,8 @@ namespace DataAccessLayer.Concrete
 		{
             modelBuilder.Entity<Article>().Property(x => x.CreateDate).HasColumnType("datetime");
             modelBuilder.Entity<Article>().Property(x => x.ClickAmount).HasDefaultValue(0);
+
+            modelBuilder.Entity<Comment>().Property(x => x.ParentID).HasDefaultValue(0);
            
 		}
 		public DbSet<About> Abouts { get; set; }

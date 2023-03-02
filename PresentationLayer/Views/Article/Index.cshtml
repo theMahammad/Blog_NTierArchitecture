@@ -24,7 +24,7 @@
 								<ul class="blog-icons my-4">
 									<li>
 										<a href="#">
-											<i class="far fa-calendar-alt"></i> @(((DateTime) item.CreateDate).ToString("dd MMMM yyyy"))
+											<i class="far fa-calendar-alt"></i> @(((DateTime) item.CreateDate).ToString("dd MMMM, yyyy"))
 										</a>
 									</li>
 									<li class="mx-2">
@@ -54,7 +54,7 @@
 									}
 									...
 								</p>
-								<a href="Article/ArticleDetails?=@item.ID" class="btn btn-primary read-m">Read More</a>
+								<a href="Article/ArticleDetails/@(item.ID)?_=@item.Title" class="btn btn-primary read-m">Read More</a>
 							</div>
 						</div>
 

@@ -35,7 +35,7 @@ namespace PresentationLayer.Controllers
         }
               
         
-        public IActionResult ArticleDetails(int id){
+        public IActionResult ArticleDetails([FromRoute]int id,[FromQuery]string _){
 
             var selectedArticle = manager.GetByIdWithAllRelatedElements(id);
             

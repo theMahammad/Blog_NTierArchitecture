@@ -12,6 +12,7 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int ID { get; set; }
+        public int ParentID { get; set; }
         public string Username { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
