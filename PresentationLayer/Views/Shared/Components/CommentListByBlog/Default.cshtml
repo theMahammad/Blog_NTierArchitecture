@@ -1,0 +1,22 @@
+﻿@using EntityLayer.Concrete
+@model IEnumerable<Comment> 
+
+
+<div class="comment-top">
+	<h4>Comments</h4>
+	<div class="media">
+
+        @foreach(var item in Model)
+        {
+             <div class="media-body">
+			<h5 class="mt-0">@item.Username</h5>
+			<p>
+                @item.Content
+			</p>
+
+			
+		</div>
+        }
+       
+	</div>
+</div>

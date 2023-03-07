@@ -9,7 +9,7 @@
 <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
 	
 	@await Html.PartialAsync("Partial_ArticleDetails/ArticleDetails_ArticleItSelf")
-	@await Component.InvokeAsync("CommentList", 'N')
+	@await Component.InvokeAsync("CommentListByBlog", Model.ID)
 	@await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
 	
 	

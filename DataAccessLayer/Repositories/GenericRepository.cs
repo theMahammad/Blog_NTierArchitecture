@@ -31,8 +31,25 @@ namespace DataAccessLayer.Repositories
 
 		public List<T> GetAll(Expression<Func<T, bool>> filter = null)
         {
-            
-            return (filter == null ? DbSetCurrentEntity.ToList() : DbSetCurrentEntity.Where(filter).ToList());
+            if( filter== null)
+            {
+               return DbSetCurrentEntity.ToList();
+
+            }
+            else
+            {   //Some LINQ methods are not supported from Entity Framework, so this can lead a exception.
+                try
+                {
+					return DbSetCurrentEntity.Where(filter).ToList();
+				}
+                catch (Exception)
+                {
+
+                    return DbSetCurrentEntity.Where(filter.Compile()).ToList();
+                }
+            }
+			
+             
 
 		}
 
