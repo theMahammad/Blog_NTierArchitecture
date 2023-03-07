@@ -151,11 +151,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ParentID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(0);
-
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
@@ -171,7 +166,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("ArticleID");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Contact", b =>

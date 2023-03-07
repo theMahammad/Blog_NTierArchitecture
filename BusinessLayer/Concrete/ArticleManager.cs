@@ -4,6 +4,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace BusinessLayer.Concrete
 		{
 			this.articleDal = articleDal;
 		}
-		public void Add(Article t)
+		public void Insert(Article t)
 		{
 			t.Content = t.Content.Trim();
 			articleDal.Insert(t);
@@ -27,10 +28,7 @@ namespace BusinessLayer.Concrete
 			articleDal.Delete(t); 
 		}
 
-		public List<Article> GetAll()
-		{
-			return articleDal.GetAll();
-		}
+		
 
 		public Article GetById(int id)
 		{
@@ -69,5 +67,10 @@ namespace BusinessLayer.Concrete
 			}
 			
         }
-    }
+
+		public List<Article> GetAll(Expression<Func<Article, bool>> filter = null)
+		{
+			return articleDal.GetAll(filter);
+		}
+	}
 }

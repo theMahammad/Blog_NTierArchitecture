@@ -24,8 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Article/Partial_ArticleDetails/ArticleDetails_ArticleItself.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxQYXJ0aWFsX0FydGljbGVEZXRhaWxzXEFydGljbGVEZXRhaWxzX0FydGljbGVJdHNlbGYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Comment/PartialAddComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxQYXJ0aWFsQWRkQ29tbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Comment/PartialCommentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxQYXJ0aWFsQ29tbWVudExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Home/Index.cshtml]
@@ -34,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Components/CommentList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ29tbWVudExpc3RcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/hssjx/source/repos/LearningMVC/PresentationLayer/Views/Shared/Error.cshtml]

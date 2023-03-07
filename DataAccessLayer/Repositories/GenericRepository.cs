@@ -5,6 +5,7 @@ using Microsoft.Identity.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,12 +27,16 @@ namespace DataAccessLayer.Repositories
            context.SaveChanges();
         }
 
-        public List<T> GetAll()
-        {
-            return DbSetCurrentEntity.ToList();
-        }
+      
 
-        public  T GetById(int id)
+		public List<T> GetAll(Expression<Func<T, bool>> filter = null)
+        {
+            
+            return (filter == null ? DbSetCurrentEntity.ToList() : DbSetCurrentEntity.Where(filter).ToList());
+
+		}
+
+		public  T GetById(int id)
         {
             return DbSetCurrentEntity.Find(id);
         }
@@ -42,7 +47,13 @@ namespace DataAccessLayer.Repositories
             context.SaveChanges();
         }
 
-        public void Update(T t)
+		public List<T> List(Expression<Func<T, bool>> filter)
+		{
+            var data = context.Set<T>().Where(filter).ToList();
+            return data;
+		}
+
+		public void Update(T t)
         {
             context.Update(t);
             context.SaveChanges();

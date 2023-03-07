@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -18,6 +19,7 @@ namespace DataAccessLayer.EntityFramework
 	{
 		public List<Article> GetAllArticlesWithAllRelatedElements()
 		{
+			
 			using (var context = new Context())
 			{
 				return context.Articles

@@ -11,7 +11,6 @@ namespace PresentationLayer.Controllers
         CategoryManager manager = new CategoryManager(new EfCategoryRepository());
         public IActionResult Index()
         {
-
             var categories = manager.GetAll();
             return View(categories);
         }

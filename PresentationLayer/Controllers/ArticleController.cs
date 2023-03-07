@@ -13,24 +13,12 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Index()
         {
-            var articles = manager.GetAllArticlesWithAllRelatedElements();
+            var articles = manager.GetAll(x=>x.IsDeleted==false);
             return View(articles);
         }
         public IActionResult AddArticle()
         {
-            Article article = new()
-            {
-                Title = "Test",
-                Content = "Content Content Content Content Content",
-                CreateDate = DateTime.Now,
-                Image = "image.jpg",
-                ThumbNailImage = "thumbnail.jpg",
-                IsDeleted= false,
-                WriterId = 2,
-                CategoryID = 1
-                
-            };
-            manager.Add(article);            
+                       
             return RedirectToAction("Index");
         }
               

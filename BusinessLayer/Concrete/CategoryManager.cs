@@ -5,6 +5,7 @@ using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +20,7 @@ namespace BusinessLayer.Concrete
             this.categoryDal = categoryDal;
         }
 
-		public void Add(Category t)
+		public void Insert(Category t)
 		{
 			categoryDal.Insert(t);
 		}
@@ -33,10 +34,7 @@ namespace BusinessLayer.Concrete
 			categoryDal.Update(t);
 		}
 
-		public List<Category> GetAll()
-		{
-			return categoryDal.GetAll();
-		}
+		
 
 		
 
@@ -45,8 +43,9 @@ namespace BusinessLayer.Concrete
 			return categoryDal.GetById(id);
 		}
 
-	
-
-		
+		public List<Category> GetAll(Expression<Func<Category, bool>> filter = null)
+		{
+			return categoryDal.GetAll(filter);
+		}
 	}
 }
