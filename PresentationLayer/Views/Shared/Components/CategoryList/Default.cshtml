@@ -1,0 +1,24 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+
+<div class="tech-btm">
+	<h4>Categories</h4>
+	@if (Model != null)
+	{
+		<ul class="list-group single">
+		@foreach (var item in Model)
+	{
+		
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+
+					@item.Name
+				<span class="badge badge-primary badge-pill">@item.Articles.Count</span>
+				</li>
+
+			
+	}
+		</ul>
+	}
+	
+	
+</div>

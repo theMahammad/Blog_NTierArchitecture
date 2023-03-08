@@ -47,5 +47,10 @@ namespace BusinessLayer.Concrete
 		{
 			return categoryDal.GetAll(filter);
 		}
+
+		public List<Category> GetCategoriesWithItsArticles()
+		{
+			return categoryDal.GetCategoriesWithItsArticles();
+		}
 	}
 }
