@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Concrete
+@model Article
+<div class="single-gd tech-btm">
+	<h4>Recent Post</h4>
+	<div class="blog-grids">
+		<div class="blog-grid-left">
+			<a href="@(Model.ID)?t_@(Model.Title)">
+				<img src="/CoreBlogTema/web/images/1.jpg" class="img-fluid" alt="">
+			</a>
+		</div>
+		<div class="blog-grid-right">
+
+			<h5>
+				<a href="@(Model.ID)?t_@(Model.Title)">@Model.Title</a>
+			</h5>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>

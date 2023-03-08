@@ -54,7 +54,12 @@ namespace DataAccessLayer.EntityFramework
             return selectedArticle;
         }
 
-        public void IncreaseClickAmount(Article article)
+		public Article GetRecent()
+		{
+			return context.Articles.OrderBy(x=> x.CreateDate).Last();
+		}
+
+		public void IncreaseClickAmount(Article article)
         {
             article.ClickAmount++;
             Update(article);

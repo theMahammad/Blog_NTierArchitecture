@@ -72,5 +72,10 @@ namespace BusinessLayer.Concrete
 		{
 			return articleDal.GetAll(filter);
 		}
+
+		public Article GetRecent()
+		{
+			return articleDal.GetRecent();
+		}
 	}
 }

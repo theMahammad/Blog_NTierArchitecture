@@ -15,5 +15,6 @@ namespace DataAccessLayer.Abstract
 		public List<Article> GetAllArticlesWithCategory();
 		public List<Article> GetAllArticlesWithAllRelatedElements();
 		public Article GetByIdWithAllRelatedElements(int id);
+		public Article GetRecent();
 	}
 }

@@ -14,5 +14,6 @@ namespace BusinessLayer.Abstract
 		Article GetByIdIncreasingClickAmount(int id);
 		public List<Article> GetAllArticlesWithAllRelatedElements();
         public Article GetByIdWithAllRelatedElements(int id);
+		public Article GetRecent();
     }
 }
