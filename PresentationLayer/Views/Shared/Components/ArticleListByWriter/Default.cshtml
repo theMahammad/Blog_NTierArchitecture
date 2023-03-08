@@ -1,0 +1,45 @@
+﻿@using EntityLayer.Concrete
+@model Writer
+
+<div class="tech-btm">
+	@if (Model.Articles.Count > 3)
+	{
+		<h4>Last three articles of this writer</h4>
+	}
+	else
+	{
+		<h4>
+			All articles of this writer
+		</h4>
+	}
+
+	@{
+		var articles = Model.Articles;
+		articles.Reverse();
+		var lastThreeArticles = articles.Take(3);
+	}
+	@foreach(var item in lastThreeArticles)
+	{
+		<div class="blog-grids row mb-3">
+		<div class="col-md-5 blog-grid-left">
+			<a href="single.html">
+				<img src="/CoreBlogTema/web/images/1.jpg" class="img-fluid" alt="">
+			</a>
+		</div>
+		<div class="col-md-7 blog-grid-right">
+
+			<h5>
+				<a href="@item.ID?t_@item.Title">@item.Title </a>
+			</h5>
+			<div class="sub-meta">
+				<span>
+					<i class="far fa-clock"></i> @item.CreateDate.ToString("dd MMM, yyyy")
+				</span>
+			</div>
+		</div>
+
+	</div>
+	}
+	
+	
+</div>
