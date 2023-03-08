@@ -13,6 +13,7 @@ namespace PresentationLayer.Controllers
 
         public IActionResult Index()
         {
+          
             var articles = manager.GetAll(x=>x.IsDeleted==false);
             return View(articles);
         }
