@@ -8,14 +8,16 @@ namespace PresentationLayer.Controllers
     public class RegistrationController : Controller
     {
         WriterManager manager = new WriterManager(new EfWriterRepository());
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
-        public IActionResult Register(Writer writer)
+        [HttpPost]
+        public IActionResult Index(Writer writer)
         {
-            manager.Insert(writer);
-            return RedirectToAction("Index","Home");
+
+            return View();
         }
     }
 }

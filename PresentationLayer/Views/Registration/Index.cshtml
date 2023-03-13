@@ -4,6 +4,8 @@
 	License: Creative Commons Attribution 3.0 Unported
 	License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+@using EntityLayer.Concrete;
+@model Writer;
 @{
 	Layout = "~/Views/Shared/UserLayout.cshtml";
 	ViewData["Title"] = "Registration";
@@ -18,29 +20,33 @@
 						<div class="form-row">
 							<div class="col-md-6 mb-3">
 								<label for="validationCustom01">Full name</label>
-
-								<input type="text" class="form-control" id="validationDefault01"  name="Name" placeholder="" required="">
+								@Html.TextBoxFor(x=>x.Name, new {@class = "form-control"})
+								
 							</div>
 							<div class="col-md-6 mb-3">
 								<label for="validationCustom02">Email</label>
-								<input type="email" class="form-control" id="validationDefault02" name="EmailAdress" placeholder="" required="">
+								@Html.TextBoxFor(x=>x.EmailAdress, new {@class = "form-control"})
+								
+								
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="exampleInputPassword1 mb-2">Password</label>
-								<input type="password" class="form-control" id="password1" name="Password" placeholder="" required="">
+							<label for="password1 mb-2">Password</label>
+								@Html.TextBoxFor(x=>x.Password, new {@class = "form-control",@id="password1",@type="password"})
 							</div>
 							<div class="form-group col-md-6">
-								<label for="exampleInputPassword2 mb-2">Confirm Password</label>
-								<input type="password" class="form-control" id="password2" placeholder="" required="">
+							<label for="password2 mb-2">Confirm Password</label>
+							@Html.TextBoxFor(x=>x.Password, new {@class = "form-control",@id="password2",@type="password"})
 							</div>
+						</div>
+						
 						<div class="form-group">
 							<label for="mb-2">Short information about you</label>
-							<textarea type="text" class="form-control" id="password2" name="About" placeholder="" required=""></textarea>
+							@Html.TextAreaFor(x=> x.About, new {@class = "form-control"})	
 						</div>
 
-						</div>
+						
 						<button type="submit" class="btn btn-primary submit mb-4">Become a Writer Now!</button>
 						<p>
 							<a href="#">By clicking Signup, I agree to your terms</a>
