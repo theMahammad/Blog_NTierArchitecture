@@ -27,6 +27,8 @@ namespace DataAccessLayer.Concrete
 		{
             modelBuilder.Entity<Article>().Property(x => x.CreateDate).HasColumnType("datetime");
             modelBuilder.Entity<Article>().Property(x => x.ClickAmount).HasDefaultValue(0);
+            modelBuilder.Entity<Writer>().Property(x => x.About).IsRequired(false) ;
+            modelBuilder.Entity<Writer>().Property(x => x.Image).IsRequired(false);
 
             
            

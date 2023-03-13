@@ -41,7 +41,9 @@ namespace BusinessLayer.Concrete
 
 		public void Insert(Writer t)
 		{
-			throw new NotImplementedException();
+			t.EmailAdress = t.EmailAdress.Trim();
+			t.EmailAdress = t.EmailAdress.ToLower();
+			writerDal.Insert(t);
 		}
 
 		public void Update(Writer t)

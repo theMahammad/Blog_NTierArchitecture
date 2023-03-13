@@ -14,7 +14,7 @@ namespace PresentationLayer.Controllers
         }
         public IActionResult Register(Writer writer)
         {
-
+            manager.Insert(writer);
             return RedirectToAction("Index","Home");
         }
     }
