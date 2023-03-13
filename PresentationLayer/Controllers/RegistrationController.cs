@@ -15,7 +15,8 @@ namespace PresentationLayer.Controllers
             var RegistryViewModel = new RegistryViewModel
             {
                 Writer = new Writer(),
-                Categories = c_manager.GetAll()
+                Categories = c_manager.GetAll(),
+                Terms = "Our terms are very supportive"
             };
             return View(RegistryViewModel);
         }

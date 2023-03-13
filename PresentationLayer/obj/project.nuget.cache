@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2Hpt1r/rAOO8giezVOMoWnF14Q474z1jn7U6XF1p3hKNtFRFTCSVZEHvBeuIM/AuDpQXsc4gAeW83DDPbKr3Ew==",
+  "dgSpecHash": "cL1Z2615ChqOTpTWRICrhqOl6rNn5+w+WxBZ7PGZHkjuBrbVACMDoUbzlwCTSlqFK+KsCRnB7NTr+D9hpwwZig==",
   "success": true,
   "projectFilePath": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\PresentationLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hssjx\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\hssjx\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\hssjx\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\hssjx\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\hssjx\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",

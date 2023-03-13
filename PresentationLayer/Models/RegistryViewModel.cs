@@ -6,5 +6,6 @@ namespace PresentationLayer.Models
 	{
 		public Writer Writer { get; set; }
 		public List<Category> Categories { get; set; }
+		public string Terms { get; set; }
 	}
 }

@@ -10,7 +10,10 @@
 	Layout = "~/Views/Shared/UserLayout.cshtml";
 	ViewData["Title"] = "Registration";
 }
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
 	<section class="main-content-w3layouts-agileits">
 		<div class="container">
 			<h3 class="tittle">Register Now</h3>
@@ -57,23 +60,34 @@
 						
 						<button type="submit" class="btn btn-primary submit mb-4">Become a Writer Now!</button>
 						<p>
-							<a href="#">By clicking Signup, I agree to your terms</a>
+						<a href="#" onclick="ShowTerms()">By clicking Signup, I agree to your terms</a>
 						</p>
 					</form>
-
+					
 				</div>
 			</div>
 		</div>
 	</section>
+
+<script>
+	function ShowTerms(){
+		swal("Our terms","@Model.Terms");	
+	}
+	
+
+</script>
 	
 	<script src="/CoreBlogTema/web/js/jquery-2.2.3.min.js"></script>
+	
 	<!-- //js -->
 	<!-- password-script -->
 	<script>
 		window.onload = function () {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
+			
 		}
+		
 
 		function validatePassword() {
 			var pass2 = document.getElementById("password2").value;
