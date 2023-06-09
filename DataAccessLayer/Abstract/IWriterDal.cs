@@ -10,5 +10,6 @@ namespace DataAccessLayer.Abstract
 	public interface IWriterDal:IGenericDal<Writer>
 	{
 		public Writer GetSelectedWriterWithItsArticles(int writerId);
+		public void WriterAddByHashing(Writer writer);
 	}
 }

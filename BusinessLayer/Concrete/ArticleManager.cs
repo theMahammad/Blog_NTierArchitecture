@@ -13,6 +13,7 @@ namespace BusinessLayer.Concrete
 	public class ArticleManager : IArticleService
 	{
 		IArticleDal articleDal;
+		// Sabah EF əvəzinə başqa ORM işlədə bilərik deyə EFRepo ilə yox, birbaşa I__Dal ilə çağırdıq.
 		public ArticleManager(IArticleDal articleDal)
 		{
 			this.articleDal = articleDal;

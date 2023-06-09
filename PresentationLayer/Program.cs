@@ -1,3 +1,5 @@
+using FluentValidation.AspNetCore;
+using BusinessLayer.ValidationRules;
 namespace PresentationLayer
 {
     public class Program
@@ -7,7 +9,16 @@ namespace PresentationLayer
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews()
+                .AddFluentValidation(fv =>
+                {
+                    fv.DisableDataAnnotationsValidation = false;
+                    fv.RegisterValidatorsFromAssemblyContaining<WriterValidator>();
+                });
+
+
+            
+            
 
             var app = builder.Build();
 

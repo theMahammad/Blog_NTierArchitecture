@@ -15,10 +15,10 @@ namespace BusinessLayer.ValidationRules
 		{
 			RuleFor(x => x.EmailAdress).NotEmpty().WithMessage("Email adress cannot be empty");
 			RuleFor(x => x.Name).NotEmpty().WithMessage("Name cannot be empty");
-			RuleFor(x => x.Password).NotEmpty().WithMessage("Password cannot be empty");
-			RuleFor(x => x.Password).MinimumLength(8).WithMessage("Password must contains at least 8 character");
-			 
+			RuleFor(x => x.Password).NotEmpty().WithMessage("Password cannot be empty")
+				.MinimumLength(8).WithMessage("Password must contains at least 8 character"); ;
 
+		
 		}
 	}
 }

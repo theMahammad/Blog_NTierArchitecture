@@ -26,7 +26,7 @@ namespace DataAccessLayer.EntityFramework
 					.Include(x => x.Category)
 					.Include(x=> x.Writer)
 					.Include(x=> x.Comments)
-					.ToList();
+					.ToList(); //Eager load
 
 			}
 		}

@@ -1,3 +1,8 @@
+C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\bin\Debug\net6.0\BusinessLayer.deps.json
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\bin\Debug\net6.0\BusinessLayer.dll
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\bin\Debug\net6.0\BusinessLayer.pdb
@@ -5,11 +10,6 @@ C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\bin\Debug\net6.0\DataAcces
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\bin\Debug\net6.0\EntityLayer.dll
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\bin\Debug\net6.0\EntityLayer.pdb
-C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.AssemblyReference.cache
-C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfoInputs.cache
-C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.AssemblyInfo.cs
-C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.csproj.CopyComplete
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\BusinessLayer.dll
 C:\Users\hssjx\source\repos\LearningMVC\BusinessLayer\obj\Debug\net6.0\refint\BusinessLayer.dll

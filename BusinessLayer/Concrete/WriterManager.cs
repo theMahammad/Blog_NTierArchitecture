@@ -43,7 +43,7 @@ namespace BusinessLayer.Concrete
 		{
 			t.EmailAdress = t.EmailAdress.Trim();
 			t.EmailAdress = t.EmailAdress.ToLower();
-			writerDal.Insert(t);
+			writerDal.WriterAddByHashing(t);
 		}
 
 		public void Update(Writer t)
