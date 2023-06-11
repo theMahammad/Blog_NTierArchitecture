@@ -10,6 +10,7 @@ namespace EntityLayer.Concrete
 	{
 		public int Id { get; set; }
 		public string Email { get; set; }
+		public bool Status { get; set; }
 		public DateTime SubscribingBeginDate { get; set; }
 		public DateTime? SubscribingCancelDate { get; set; }
 	}

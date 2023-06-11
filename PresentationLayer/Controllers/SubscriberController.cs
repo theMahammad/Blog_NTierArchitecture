@@ -2,6 +2,8 @@
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+
 
 namespace PresentationLayer.Controllers
 {
@@ -12,11 +14,18 @@ namespace PresentationLayer.Controllers
 		{
 			return View();
 		}
-		public IActionResult AddSubscriber(Subscriber subscriber)
+		[HttpPost]
+		public object AddSubscriber(Subscriber subscriber)
 		{
-			subscriber.SubscribingBeginDate = DateTime.Now;
-			manager.Insert(subscriber);
-			return RedirectToAction("Index","Article");
+			
+			
+				
+				subscriber.SubscribingBeginDate = DateTime.Now;
+				manager.Insert(subscriber);
+
+			return PartialView();
+
+
 		}
 	}
 }

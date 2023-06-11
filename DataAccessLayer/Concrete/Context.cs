@@ -29,7 +29,7 @@ namespace DataAccessLayer.Concrete
             modelBuilder.Entity<Article>().Property(x => x.ClickAmount).HasDefaultValue(0);
             modelBuilder.Entity<Writer>().Property(x => x.About).IsRequired(false) ;
             modelBuilder.Entity<Writer>().Property(x => x.Image).IsRequired(false);
-
+            modelBuilder.Entity<Subscriber>().Property(x => x.Status).HasDefaultValue(true);
             
            
 		}
@@ -39,7 +39,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Article> Articles { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Writer> Writers { get; set; }
-
+       
         
     }
 }

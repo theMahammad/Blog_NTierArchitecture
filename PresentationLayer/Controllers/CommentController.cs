@@ -19,10 +19,7 @@ namespace PresentationLayer.Controllers
 		{
 			return PartialView();
 		}
-		public PartialViewResult BeleIshinIcini()
-		{
-			return PartialView();
-		}
+	
 		
 		public PartialViewResult PartialCommentList(int articleId)
 		{

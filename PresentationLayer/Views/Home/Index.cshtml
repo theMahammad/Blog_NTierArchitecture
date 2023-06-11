@@ -6,3 +6,34 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<form  method="post">
+    <input class="form-control" type="text" id="name" name="Name"/>
+    <input type="text" class="form-control" id="description" name="Description"/>
+    <input onclick="AddCategory()" id="submit" type="button" value="Add Category"/>
+</form>
+@section Scripts{
+    <script src="~/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript">
+       function AddCategory(){
+          
+         var myData = new FormData();
+           myData.append("Name",$('#name').val())
+           myData.append("Description",$('#description').val())
+           console.log(myData)
+            $.ajax({
+                type: 'POST',
+                url: '/Category/AddCategory',
+                contentType: false,
+                processData: false,
+                data: myData,
+                success: function(result){
+                    alert(result)
+                }
+            });
+            
+       } 
+       
+    </script>
+}
+

@@ -14,5 +14,10 @@ namespace PresentationLayer.Controllers
             var categories = manager.GetAll();
             return View(categories);
         }
+        public IActionResult AddCategory(Category category)
+        {
+            manager.Insert(category);
+            return this.Ok("Afərin");
+        }
     }
 }

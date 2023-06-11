@@ -1,0 +1,46 @@
+﻿<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+
+							<img src="~/images/banner1.jpg" class="img-fluid" alt="">
+						</div>
+						<div class="tech-btm">
+							<h4>Sign up to our newsletter</h4>
+							<p>Pellentesque dui, non felis. Maecenas male </p>
+							<form  method="post">
+								<input type="email" placeholder="Email" id="Email" name ="Email" required="">
+								<input id="submitButton" type="submit" value="Subscribe">
+							</form>
+
+						</div>
+
+<script type="text/javascript">
+	$('#submitButton').click(function () {
+		alert("a")
+		var formData = new FormData()
+		formData.append("Email", $('#Email').val())
+
+
+
+		$.ajax({
+			type: "POST",
+			url: "/Subscriber/AddSubscriber",
+			contentType: false,
+			processData: false,
+			data: formData,
+			success: function (func) {
+
+				let result = jQuery.ParseJSON(func)
+				console.log(result)
+
+			},
+			error: function (result) {
+				console.log(result)
+			},
+			complete: function () {
+				alert("Always")
+			}
+		});
+	});
+			
+</script>
