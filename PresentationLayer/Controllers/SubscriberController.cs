@@ -14,16 +14,11 @@ namespace PresentationLayer.Controllers
 		{
 			return View();
 		}
-		[HttpPost]
-		public object AddSubscriber(Subscriber subscriber)
+		
+		public IActionResult AddSubscriber(Subscriber subscriber)
 		{
-			
-			
-				
-				subscriber.SubscribingBeginDate = DateTime.Now;
-				manager.Insert(subscriber);
-
-			return PartialView();
+			manager.Insert(subscriber);
+			return this.Ok("Qəşəəy");
 
 
 		}

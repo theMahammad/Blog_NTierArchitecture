@@ -30,6 +30,9 @@ namespace DataAccessLayer.Concrete
             modelBuilder.Entity<Writer>().Property(x => x.About).IsRequired(false) ;
             modelBuilder.Entity<Writer>().Property(x => x.Image).IsRequired(false);
             modelBuilder.Entity<Subscriber>().Property(x => x.Status).HasDefaultValue(true);
+            modelBuilder.Entity<Subscriber>().Property(x => x.SubscribingBeginDate).HasDefaultValueSql("GETDATE()");
+
+
             
            
 		}

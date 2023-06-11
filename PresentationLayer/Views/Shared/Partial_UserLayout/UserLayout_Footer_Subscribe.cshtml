@@ -1,14 +1,16 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="~/CoreBlogTema/web/js/jquery-2.2.3.min.js"></script>
+	<!-- //js -->
+	<!--/ start-smoth-scrolling -->
+	<script src="~/CoreBlogTema/web/js/move-top.js"></script>
+	<script src="~/CoreBlogTema/web/js/easing.js"></script>
 <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
 				<h2>Signup to our newsletter</h2>
 				<div class="subscribe-main text-left">
 					<div class="subscribe-form">
 						<form action="#" method="post" class="subscribe_form">
-							<input class="form-control" type="email" placeholder="Enter your email..." required="">
-							<button type="submit" class="btn btn-primary submit">Submit</button>
+							<input class="form-control" type="email" name="Email" id="Email" placeholder="Enter your email..." required="">
+							<button id="submitButton" type="submit" class="btn btn-primary submit">Submit</button>
 						</form>
 						<div class="clearfix"> </div>
 					</div>
@@ -16,3 +18,33 @@
 				</div>
 				<!-- //subscribe -->
 			</div>
+
+			<script>
+				$('#submitButton').click(function (event) {
+		alert("a")
+		event.preventDefault();
+	var formData = new FormData()
+	formData.append("Email", $('#Email').val())
+	
+
+
+	$.ajax({
+		type: "POST",
+		url: "/Subscriber/AddSubscriber",
+		contentType: false,
+		processData: false,
+		data: formData,
+		success: function (result) {
+
+			alert(result)
+
+		},
+		error: function (result) {
+			console.log(result)
+		},
+		complete: function () {
+			alert("Always")
+		}
+	});
+});
+			</script>

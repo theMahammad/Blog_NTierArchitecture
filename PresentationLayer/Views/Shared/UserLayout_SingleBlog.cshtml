@@ -40,7 +40,7 @@
 							<p>Pellentesque dui, non felis. Maecenas male </p>
 							<form  method="post">
 								<input type="email" placeholder="Email" id="Email" name ="Email" required="">
-								<input id="submitButton" type="submit" value="Subscribe">
+								<input id="submitButton" type="button" value="Subscribe">
 							</form>
 
 						</div>
@@ -127,6 +127,7 @@
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script type="text/javascript">
 
+
 	$('#submitButton').click(function () {
 		alert("a")
 
@@ -141,10 +142,9 @@
 			contentType: false,
 			processData: false,
 			data: formData,
-			success: function (func) {
+			success: function (result) {
 
-				let result = jQuery.ParseJSON(func)
-				console.log(result)
+				alert(result)
 
 			},
 			error: function (result) {
@@ -155,7 +155,6 @@
 			}
 		});
 	});
-
 </script>
 
 
