@@ -289,6 +289,10 @@
       "PackagePath": "staticwebassets\\images\\top_up.png"
     },
     {
+      "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\js\\addComment.js",
+      "PackagePath": "staticwebassets\\js\\addComment.js"
+    },
+    {
       "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.js"
     },

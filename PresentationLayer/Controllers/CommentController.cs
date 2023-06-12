@@ -26,6 +26,13 @@ namespace PresentationLayer.Controllers
 			var values = manager.GetAll(x => x.ArticleID == articleId);
 			return PartialView(values);
 		}
+		public IActionResult AddComment(Comment comment)
+		{
+			manager.Insert(comment);
+			var addedComment = manager.GetAll(x => x.ArticleID == comment.ArticleID).Last();
+
+			return Json(addedComment);
+		}
 
 	}
 }

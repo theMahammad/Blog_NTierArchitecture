@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xV2pOtFThyQYnQqDwnTjQDpqwGu1Br+M7OG1BmuXoDc=",
+  "Hash": "HB8C72mG3WkcCOhlhfTPJm8XTOEpHANBSTS3Wqyw0kA=",
   "Source": "PresentationLayer",
   "BasePath": "_content/PresentationLayer",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\top_up.png"
+    },
+    {
+      "Identity": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\js\\addComment.js",
+      "SourceId": "PresentationLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\",
+      "BasePath": "_content/PresentationLayer",
+      "RelativePath": "js/addComment.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\addComment.js"
     },
     {
       "Identity": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\js\\bootstrap.js",

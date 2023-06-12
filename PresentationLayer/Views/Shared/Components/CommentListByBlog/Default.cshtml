@@ -1,17 +1,19 @@
 ﻿@using EntityLayer.Concrete
-@model IEnumerable<Comment> 
+@model CommentViewModel
 
-
+<script src="~/js/addcomment.js"></script>
+<script src="~/js/jquery-2.2.3.min.js"></script>
 <div class="comment-top">
-	<h4>Comments</h4>
+	<h4 >Comments</h4>
 	
-		@if(Model.Count() == 0)
+		@if(Model.Comments.Count() == 0)
 		{
 			<p>There is not a comment in this blog. <a href="#LeaveComment"> Would you like to write the first one?</a></p>
 		}
 		else
 		{
-			@foreach(var item in Model)
+		<div id="CommentList">
+			@foreach(var item in Model.Comments)
         {	<div class="media">
              <div class="media-body">
 			<h5 class="mt-0">@item.Username</h5>
@@ -22,8 +24,65 @@
 			
 		</div>
         }
+		</div>
 		}
 		
        
 	
 </div>
+
+<div id="LeaveComment" class="comment-top">
+	<h4>Leave a Comment</h4>
+	<div class="comment-bottom">
+		<form action="#" id="leaveCommentForm" method="post">
+			<input class="form-control" type="text" name="Username" id="username" placeholder="Name" required="">
+			<input class="form-control" type="email" id="email" name="Email" placeholder="Email" required="">
+
+			<input class="form-control" type="text" name="Title" id="title" placeholder="Subject" required="">
+
+			<textarea class="form-control" name="Content" id="content" placeholder="Message..." required=""></textarea>
+			<button type="submit" onclick="AddComment()" class="btn btn-primary submit">Submit</button>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function ReloadList(){
+
+	}
+	function AddComment() {
+		event.preventDefault()
+		var myData = new FormData()
+
+		myData.append("Username", $("#username").val())
+		myData.append("Email", $("#email").val())
+		myData.append("Title", $("#title").val())
+		myData.append("Content", $("#content").val())
+		myData.append("ArticleId",@Model.ArticleID)
+
+		$.ajax({
+			type: "POST",
+			contentType: false,
+			processData: false,
+			url: "/Comment/AddComment",
+			data: myData,
+			success: (response) => {
+				var div = document.createElement("div")
+				div.setAttribute("class", "media")
+				
+				div.innerHTML =
+				`<div class="media-body">
+				<h5 class="mt-0">${response.username}</h5>
+				<p>
+					${response.content}
+				</p>
+						</div>`
+				document.getElementById("CommentList").appendChild(div)
+				document.getElementById("leaveCommentForm").reset()
+				
+				
+				
+			}
+		})
+	}
+</script>
