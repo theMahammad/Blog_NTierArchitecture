@@ -1,7 +1,8 @@
 ﻿<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/jquery/dist/jquery.js"></script>
 
+<link href="~/css/style.css" rel="stylesheet" />
 
+						<div class="tech-btm">
 							<img src="~/images/banner1.jpg" class="img-fluid" alt="">
 						</div>
 						<div class="tech-btm">
@@ -15,12 +16,13 @@
 						</div>
 
 <script type="text/javascript">
+
+
 	$('#submitButton').click(function () {
-		alert("a")
+		
+		event.preventDefault()
 		var formData = new FormData()
 		formData.append("Email", $('#Email').val())
-
-
 
 		$.ajax({
 			type: "POST",
@@ -28,10 +30,9 @@
 			contentType: false,
 			processData: false,
 			data: formData,
-			success: function (func) {
+			success: function (result) {
 
-				let result = jQuery.ParseJSON(func)
-				console.log(result)
+				alert(result)
 
 			},
 			error: function (result) {
@@ -42,5 +43,4 @@
 			}
 		});
 	});
-			
 </script>

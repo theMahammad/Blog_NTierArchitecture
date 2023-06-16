@@ -161,8 +161,28 @@
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
+      "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\css\\contact.css",
+      "PackagePath": "staticwebassets\\css\\contact.css"
+    },
+    {
+      "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\css\\fontawesome-all.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome-all.css"
+    },
+    {
+      "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\css\\jquery.desoslide.css",
+      "PackagePath": "staticwebassets\\css\\jquery.desoslide.css"
+    },
+    {
+      "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\css\\single.css",
+      "PackagePath": "staticwebassets\\css\\single.css"
+    },
+    {
       "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\PresentationLayer\\wwwroot\\favicon.ico",

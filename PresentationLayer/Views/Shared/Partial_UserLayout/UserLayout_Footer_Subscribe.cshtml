@@ -8,9 +8,9 @@
 				<h2>Signup to our newsletter</h2>
 				<div class="subscribe-main text-left">
 					<div class="subscribe-form">
-						<form action="#" method="post" class="subscribe_form">
+						<form  method="post" class="subscribe_form">
 							<input class="form-control" type="email" name="Email" id="Email" placeholder="Enter your email..." required="">
-							<button id="submitButton" type="submit" class="btn btn-primary submit">Submit</button>
+							<button id="submitButtonFooter" type="submit" class="btn btn-primary submit">Submit</button>
 						</form>
 						<div class="clearfix"> </div>
 					</div>
@@ -20,8 +20,8 @@
 			</div>
 
 			<script>
-				$('#submitButton').click(function (event) {
-		alert("a")
+				$('#submitButtonFooter').click(function (event) {
+	
 		event.preventDefault();
 	var formData = new FormData()
 	formData.append("Email", $('#Email').val())

@@ -32,20 +32,8 @@
 				<!--right-->
 				<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
 					<div class="right-blog-info text-left">
-						<div class="tech-btm">
-							<img src="~/images/banner1.jpg" class="img-fluid" alt="">
-						</div>
-						<div class="tech-btm">
-							<h4>Sign up to our newsletter</h4>
-							<p>Pellentesque dui, non felis. Maecenas male </p>
-							<form  method="post">
-								<input type="email" placeholder="Email" id="Email" name ="Email" required="">
-								<input id="submitButton" type="button" value="Subscribe">
-							</form>
-
-						</div>
-							
-						
+				
+						@await Component.InvokeAsync("SubscribeMail")
 						@await Component.InvokeAsync("CategoryList")
 						@await Component.InvokeAsync("ArticleListByWriter",Convert.ToInt32(ViewContext.RouteData.Values["id"]))
 						@await Component.InvokeAsync("RecentPost")
@@ -121,41 +109,11 @@
 <script src="~/js/move-top.js"></script>
 <script src="~/js/easing.js"></script>
 
-<a href="~/lib/jquery/dist/jquery.min.map">~/lib/jquery/dist/jquery.min.map</a>
+<a href="~/lib/jquery/dist/jquery.min.map"></a>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-<script type="text/javascript">
 
-
-	$('#submitButton').click(function () {
-		alert("a")
-
-		var formData = new FormData()
-		formData.append("Email", $('#Email').val())
-
-
-
-		$.ajax({
-			type: "POST",
-			url: "/Subscriber/AddSubscriber",
-			contentType: false,
-			processData: false,
-			data: formData,
-			success: function (result) {
-
-				alert(result)
-
-			},
-			error: function (result) {
-				console.log(result)
-			},
-			complete: function () {
-				alert("Always")
-			}
-		});
-	});
-</script>
 
 
 
