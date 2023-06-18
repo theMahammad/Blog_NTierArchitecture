@@ -1,5 +1,5 @@
 ﻿<script src="~/lib/jquery/dist/jquery.min.js"></script>
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <link href="~/css/style.css" rel="stylesheet" />
 
 						<div class="tech-btm">
@@ -32,15 +32,55 @@
 			data: formData,
 			success: function (result) {
 
-				alert(result)
+				swal(result.title,result.text)
+				$('#Email').val('')
+
+
 
 			},
 			error: function (result) {
 				console.log(result)
-			},
-			complete: function () {
-				alert("Always")
+				result = result.responseJSON;
+				let subscriber = result.subscriber;
+				 swal({
+					title: result.title,
+					text:result.text,
+					icon: "warning",
+					buttons :["No","Yes"],
+				}).then((Delete) => {
+					if (Delete) {
+						let subData = new FormData();
+						subData.append("Id",subscriber.id)
+						subData.append("Email",subscriber.email)
+						
+						$.ajax({
+							type: "POST",
+							url: "/Subscriber/DeleteSubscriber",
+							contentType: false,
+							processData: false,
+							data: subData,
+							success: function (result) {
+
+								swal("We miss you, dear", {
+							icon: "success",
+							});
+								
+
+
+							},
+							error: function (result){
+								console.log("Olmadı")
+							}
+						
+					});
+					}
+					else {
+						swal("Good choice, dear!You are still our subscriber");
+					}
+				}); 
+				
 			}
 		});
+		
 	});
 </script>

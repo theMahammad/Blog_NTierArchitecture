@@ -33,7 +33,7 @@
 			<!--right-->
 			<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
 				<div class="right-blog-info text-left">
-					@Html.PartialAsync("/Subscribe/Subs")
+					@await Component.InvokeAsync("SubscribeMail")
 					<div class="tech-btm widget_social">
 						<h4>Stay Connect</h4>
 						<ul>

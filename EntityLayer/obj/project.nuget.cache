@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NfOkwsagtvcH6BZs/OIzQMtB1VDWBYwvv4fnd+qfXTASfjQ5XxztNeAyV2AI1RxaNCR2VdfYF/uOMQa0mE/yHA==",
+  "dgSpecHash": "5fZGhoi+fVhQPCM4xl3BmVixrMLbdZgVhptLsND2gUjmu93GSVPVK3oDfrXLtHVZpqFYnXqNM7R6Hw5eIfInTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hssjx\\source\\repos\\LearningMVC\\EntityLayer\\EntityLayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hssjx\\.nuget\\packages\\servicestack.interfaces\\6.9.0\\servicestack.interfaces.6.9.0.nupkg.sha512"
+  ],
   "logs": []
 }
