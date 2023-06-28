@@ -33,7 +33,10 @@ namespace DataAccessLayer.Concrete
             modelBuilder.Entity<Subscriber>().Property(x => x.SubscribingBeginDate).HasDefaultValueSql("GETDATE()");
             modelBuilder.Entity<Subscriber>().HasIndex(x => x.Email).IsUnique();
             modelBuilder.Entity<Comment>().Property(x => x.Status).HasDefaultValue(true);
+            modelBuilder.Entity<About>().Property(x => x.Status).HasDefaultValue(true);
 			modelBuilder.Entity<Comment>().Property(x => x.Date).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<Contact>().Property(x => x.Date).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<Contact>().Property(x => x.IsReaded).HasDefaultValue(false);
             
 
 
