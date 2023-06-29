@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using EntityLayer.Concrete;
+
+<div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+
+	<div class="tech-btm">
+		<h3>Latest Posts</h3>
+		@foreach(var item in (ViewBag.LastThreePosts as List<Article>))
+		{
+			<div class="blog-grids row mb-3">
+			<div class="col-md-5 blog-grid-left">
+				<a href="/Article/ArticleDetails/@item.ID?_=@item.Title">
+					<img src="~/images/4.jpg" class="card-img-top img-fluid" alt="">
+				</a>
+			</div>
+			<div class="col-md-7 blog-grid-right">
+
+				<h5>
+						@if (item.Content.Length > 50)
+						{
+							<a href="/Article/ArticleDetails/@item.ID?_=@item.Title"> @item.Content.Substring(0,item.Content.Substring(0,50).LastIndexOf(""))</a>
+
+						}
+						else
+						{
+							<a href="/Article/ArticleDetails/@item.ID?_=@item.Title"> @item.Content</a>
+
+						}
+					</h5>
+				<div class="sub-meta">
+					<span>
+						<i class="far fa-clock"></i> @item.CreateDate.ToString("dd MMMM, yyyy")
+					</span>
+				</div>
+			</div>
+
+		</div>
+		}
+		
+		
+	</div>
+</div>

@@ -9,8 +9,9 @@ namespace PresentationLayer.Controllers
         AboutManager manager = new(new EfAboutRepository());
         public IActionResult Index()
         {
+            
             var model = manager.GetAll();
-            return View(model);
+			return View(model);
         }
     }
 }

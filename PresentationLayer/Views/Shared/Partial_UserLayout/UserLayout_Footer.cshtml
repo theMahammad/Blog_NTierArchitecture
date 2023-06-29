@@ -5,8 +5,10 @@
 
 	<div class="container">
 		<div class="row">
-			@await Html.PartialAsync("Partial_UserLayout/UserLayout_Footer_AboutUs")
-			@await Html.PartialAsync("Partial_UserLayout/UserLayout_Footer_LatestPosts")
+
+			@await Component.InvokeAsync("ShortlyAbout")
+			@await Component.InvokeAsync("LastThreePosts")
+			
 			@await Html.PartialAsync("Partial_UserLayout/UserLayout_Footer_Subscribe")
 				
 		</div>

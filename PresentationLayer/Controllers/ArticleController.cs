@@ -9,15 +9,17 @@ namespace PresentationLayer.Controllers
     public class ArticleController : Controller
     {
         ArticleManager manager = new (new EfArticleRepository());
+        AboutManager aboutManager = new AboutManager(new EfAboutRepository());
 
 
         public IActionResult Index()
         {
-          
-            var articles = manager.GetAll(x=>x.IsDeleted==false);
+            
+			var articles = manager.GetAll(x=>x.IsDeleted==false);
             return View(articles);
         }
-        public IActionResult AddArticle()
+	
+		public IActionResult AddArticle()
         {
                        
             return RedirectToAction("Index");

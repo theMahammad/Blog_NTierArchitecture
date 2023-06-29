@@ -179,7 +179,7 @@
 	<!--Ajax integration-->
 	<script type="text/javascript">
 		$("#submitButton").click(function (){
-			alert("auu")
+			
 			event.preventDefault()
 			var myData = new FormData();
 			myData.append("Name", $('[name="Name"]').val())
@@ -194,6 +194,9 @@
 				url: "/Contact/SendMessage",
 				data: myData,
 				success: function(result){
+					alert(result)
+				},
+				error: function(result){
 					alert(result)
 				}
 			})

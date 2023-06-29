@@ -4,9 +4,9 @@ namespace PresentationLayer.ViewComponents
 {
 	public class SocialMediaStats:ViewComponent
 	{
-		public IViewComponentResult Invoke()
+		public IViewComponentResult Invoke(string a)
 		{
-			return View();
+			return View(a);
 		}
 	}
 }
