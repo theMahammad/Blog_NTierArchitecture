@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PresentationLayer.Models;
 
@@ -11,7 +12,7 @@ namespace PresentationLayer.Controllers
         ArticleManager manager = new (new EfArticleRepository());
         AboutManager aboutManager = new AboutManager(new EfAboutRepository());
 
-
+        [AllowAnonymous]
         public IActionResult Index()
         {
             

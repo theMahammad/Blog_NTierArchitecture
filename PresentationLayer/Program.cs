@@ -1,5 +1,8 @@
 using FluentValidation.AspNetCore;
 using BusinessLayer.ValidationRules;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
+
 namespace PresentationLayer
 {
     public class Program
@@ -8,22 +11,31 @@ namespace PresentationLayer
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews()
-                .AddFluentValidation(fv =>
-                {
-                    fv.DisableDataAnnotationsValidation = false;
-                    fv.RegisterValidatorsFromAssemblyContaining<WriterValidator>();
-                });
+			// Add services to the container.
+			builder.Services.AddControllersWithViews()
+			  .AddFluentValidation(fv =>
+			  {
+				  fv.DisableDataAnnotationsValidation = false;
+				  fv.RegisterValidatorsFromAssemblyContaining<WriterValidator>();
+			  });
+            builder.Services.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+            });
+            builder.Services.AddSession();
 
 
+
+
+
+
+			var app = builder.Build();
+		
             
-            
 
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
+			// Configure the HTTP request pipeline.
+			if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
@@ -36,6 +48,7 @@ namespace PresentationLayer
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
