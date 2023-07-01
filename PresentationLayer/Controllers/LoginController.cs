@@ -25,6 +25,7 @@ namespace PresentationLayer.Controllers
 			 x.Password == writer.Password);
 			if(loginnedUser!=null) {
 				HttpContext.Session.SetString("username", loginnedUser.EmailAdress);
+				
 				return RedirectToAction("Index", "Article");
 			}
 			else

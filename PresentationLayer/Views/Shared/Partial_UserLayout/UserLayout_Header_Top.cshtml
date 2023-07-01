@@ -2,7 +2,11 @@
 @*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
-
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor accessor;
+@{
+	var loginnedEmail = @accessor.HttpContext.Session.GetString("username");
+}
 <div class="top-bar_sub_w3layouts container-fluid">
 	<div class="row">
 		<div class="col-md-4 logo text-left">
@@ -11,7 +15,8 @@
 			</a>
 		</div>
 		<div class="col-md-4 top-forms text-center mt-lg-3 mt-md-1 mt-0">
-			<span>Welcome Back </span>
+		
+			<span>Welcome Back, @(loginnedEmail!=null ? loginnedEmail : "") </span>
 			<span class="mx-lg-4 mx-md-2  mx-1">
 				<a href="/Login">
 					<i class="fas fa-lock"></i> Sign In

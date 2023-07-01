@@ -2,6 +2,7 @@ using FluentValidation.AspNetCore;
 using BusinessLayer.ValidationRules;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace PresentationLayer
 {
@@ -24,13 +25,20 @@ namespace PresentationLayer
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
             builder.Services.AddSession();
+            builder.Services.AddMvc();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(cookie=>
+                {
+                    cookie.LoginPath = "/Login/";
+                })
+                ;
 
 
 
 
 
 
-			var app = builder.Build();
+            var app = builder.Build();
 		
             
 
